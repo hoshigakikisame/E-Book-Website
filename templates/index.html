@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="{% static "css/ebook.css" %}">
+
+  <title>Media Penyimpan e-Book</title>
+</head>
+<body class="">
+
+  <!-- navbar -->
+  {% include "navbar.html" %}
+  <!-- end navbar -->
+
+  <!-- jumbotron -->
+  <div class="jumbotron text-center">
+    <img src="{% static "img/img1.jpg" %}" class="img-circle">
+    <h1>Media Penyimpan e-Book</h1>
+    <p>| Reading gives us someplace to go when we have to stay where we are |</p>
+  </div>
+  <!-- end jumbotron -->
+
+  <!-- about -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="row pt-4 mb-4">
+        <div class="col">
+          <h2 class="text-center">About</h2>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <p>"I wish I wrote the way I thought; Obsessively, Incessantly, With maddening hunger. I'd write to the point of suffocation. I'd write myself into nervous breakdowns, Manuscripts spiralling out like rentacles into abysmal nothing. And I'd write about you a lot more than I should."</p>
+        </div>
+        <div class="col-sm-6">
+          <p>"I wish I wrote the way I thought; Obsessively, Incessantly, With maddening hunger. I'd write to the point of suffocation. I'd write myself into nervous breakdowns, Manuscripts spiralling out like rentacles into abysmal nothing. And I'd write about you a lot more than I should."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about -->
+
+  <!-- portfolio -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="row pt-4 mb-4">
+        <div class="col text-center">
+          <h2>Portfolio</h2>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <img class="card-img-top" src="{% static "img/portfolio/1.png" %}" alt="Card image cap">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img class="card-img-top" src="{% static "img/portfolio/2.png" %}" img-width="200" alt="Card image cap">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img class="card-img-top" src="{% static "img/portfolio/3.png" %}" alt="Card image cap">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img class="card-img-top" src="{% static "img/portfolio/4.png" %}" alt="Card image cap">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img class="card-img-top" src="{% static "img/portfolio/5.png" %}" alt="Card image cap">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img class="card-img-top" src="{% static "img/portfolio/6.png" %}" alt="Card image cap">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end portfolio -->
+
+    <!-- contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row pt-4 mb-4">
+          <div class="col text-center">
+            <h2>Contact Us</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-4">
+            <div class="card text-white bg-primary mb-3 text-center">
+              <div class="card-body">
+                <h5 class="card-title">Contact Us</h5>
+                <p class="card-text">You are the light of the world</p>
+              </div>
+            </div>
+
+            <ul class="list-group">
+              <li class="list-group-item"><h1>Location</h1></li>
+              <li class="list-group-item">My Office</li>
+              <li class="list-group-item">Jl. Widas N-10, Malang</li>
+              <li class="list-group-item">East Java, Indonesia</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <form>
+              <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" id="nama">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="telp">No Telp</label>
+                <input type="text" class="form-control" id="telp">
+              </div>
+              <div class="form-group">
+                <label for="pesan">Pesan</label>
+                <textarea name="pesan" id="pesan" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary">Kirim Pesan</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div> 
+    </section>
+    <!-- end contact -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>&copy; Copyright 2020 | built by <a href="http://instagram.com/aayreene">Ayreene Putri</a>.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+  </html>

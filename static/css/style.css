@@ -1,0 +1,43 @@
+html {
+	position: relative;
+}
+body {
+	margin-bottom: 100px;
+}
+.jumbotron {
+	background-color: pink;
+	height: 450px;
+}
+.jumbotron img {
+	width: 300px;
+	border: 2px solid black;
+}
+hr {
+	width: 300px;
+	border-top: 3px solid black;
+}
+section {
+	min-height: 300px; 
+}
+.about {
+	min-height: 300px;
+}
+.portfolio {
+	background-color: pink;
+	height: 400px;
+}
+.contact {
+	min-height: 700px;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background-color: #333;
+	padding-top: 30px;
+}
+footer p {
+	color: #aaa;
+	font-size: 1em;
+}

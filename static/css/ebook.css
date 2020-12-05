@@ -1,0 +1,11 @@
+.ebook-card{
+	transition: 0.5s;	
+}
+
+*{
+	font-family: 'Poppins', sans-serif;
+}
+
+p{
+	font-family: 'Arial';
+}
