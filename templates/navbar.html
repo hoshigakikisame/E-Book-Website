@@ -21,6 +21,9 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">Contact</a>
 				</li>
+				<form class="form-inline my-2 my-lg-0" action="/search/" method="get">
+					<input class="search-input form-control mr-sm-2" style="position: relative;border-radius: 50px" type="search" name="query" value="{{q}}" placeholder="Search" aria-label="Search" required>
+				</form>
 				{% if not request.user.is_authenticated %}
 				<li class="nav-item">
 					<a class="btn btn-light" href="{% url 'auth:signin' %}">Sign in</a>

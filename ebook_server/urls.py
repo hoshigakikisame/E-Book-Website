@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('search/', views.search, name="search"),
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
     path('ebook/', include(('ebook.urls','ebook'), namespace="ebook")),
