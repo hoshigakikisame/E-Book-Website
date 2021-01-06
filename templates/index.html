@@ -61,36 +61,13 @@
       </div>
 
       <div class="row">
+        {% for ebook in ebook_preview %}
         <div class="col">
           <div class="card">
-            <img class="card-img-top" src="{% static "img/portfolio/1.png" %}" alt="Card image cap">
+            <img class="card-img-top" src="{{ebook.thumbnail.url}}" alt="Card image cap">
           </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="{% static "img/portfolio/2.png" %}" img-width="200" alt="Card image cap">
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="{% static "img/portfolio/3.png" %}" alt="Card image cap">
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="{% static "img/portfolio/4.png" %}" alt="Card image cap">
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="{% static "img/portfolio/5.png" %}" alt="Card image cap">
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="{% static "img/portfolio/6.png" %}" alt="Card image cap">
-          </div>
-        </div>
+        </div>  
+        {% endfor %}
       </div>
     </section>
     <!-- end portfolio -->

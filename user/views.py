@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import logout
 from user.models import UserProfile
 from ebook.models import Ebook
+from .forms import UserProfileForm
 
 # Create your views here.
 def signin_view(request):
@@ -25,7 +26,7 @@ def signup_view(request):
 		email = request.POST['email']
 		password = request.POST['password']
 		user = User.objects.create_user(username, email, password)
-		UserProfile.objects.create(user=User.objects.get(username=username))
+		UserProfile.objects.create(user=User.objects.get(username=username), display_name=User.objects.get(username=username))
 		if user:
 			return redirect('auth:signin')
 	return render(request, 'user/signup.html')
@@ -34,11 +35,24 @@ def profile(request):
 	user = UserProfile.objects.get(user=request.user)
 	ebook_user = Ebook.objects.filter(author=user.user).order_by('-upload')
 
+	data = {
+		'display_name':user.display_name,
+		'profile_photo':user.profile_photo,
+	}
+	update_profile = UserProfileForm(request.POST or None, request.FILES or None, initial=data, instance=user)
+
 	context = {
 		'user':user,
 		'photo':user.profile_photo.url,
 		'ebooks':ebook_user,
+		'update_profile':update_profile,
 	}
+
+	if request.method == "POST":
+		if update_profile.is_valid():
+			update_profile.save()
+		return redirect('auth:profile')
+
 	return render(request, 'user/profile.html', context)
 
 

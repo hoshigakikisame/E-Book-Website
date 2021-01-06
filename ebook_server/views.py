@@ -2,7 +2,8 @@ from django.shortcuts import render
 from ebook.models import Ebook
 
 def index(request):
-	return render(request, 'index.html')
+	ebook = Ebook.objects.all().order_by('-upload')[:6]
+	return render(request, 'index.html', {'ebook_preview':ebook})
 
 def search(request):
 

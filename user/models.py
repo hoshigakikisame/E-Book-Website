@@ -5,6 +5,7 @@ from django.urls import reverse
 # Create your models here.
 class UserProfile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user',null=True, blank=True)
+	display_name = models.CharField(max_length=255, default=user)
 	profile_photo = models.ImageField(blank=True, default='/index.png')
 
 	def save(self, *args, **kwargs):
